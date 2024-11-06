@@ -1,0 +1,385 @@
+{
+    "HQ-Edit-Diff": {
+        "task_instruction": "What's the difference between 2 images?",
+        "question_type": "open-ended"
+    },
+    "RAVEN": {
+        "task_instruction": "Here is a Raven’s Progressive Matrice in a three-by-three form. You are provided with the first eight elements in eight images, please select the last one from four choices following the structural and analogical relations.",
+        "question_type": "multi-choice"
+    },
+    "3D-LLM_3_datasets": {
+        "task_instruction": "",
+        "question_type": "open-ended"
+    },
+    "ScanQA": {
+        "task_instruction": "",
+        "question_type": "open-ended"
+    },
+    "contrastive_caption": {
+        "task_instruction": "",
+        "question_type": "open-ended"
+    },
+    "dreamsim": {
+        "task_instruction": "",
+        "question_type": "open-ended"
+    },
+    "iconqa": {
+        "task_instruction": "",
+        "question_type": "multi-choice"
+    },
+    "imagecode": {
+        "task_instruction": "",
+        "question_type": "multi-choice"
+    },
+    "multi_vqa": {
+        "task_instruction": "",
+        "question_type": "open-ended"
+    },
+    "nextqa": {
+        "task_instruction": "",
+        "question_type": "multi-choice"
+    },
+    "nlvr2": {
+        "task_instruction": "",
+        "question_type": "multi-choice"
+    },
+    "star": {
+        "task_instruction": "",
+        "question_type": "multi-choice"
+    },
+    "coinstruct": {
+        "task_instruction": "",
+        "question_type": "open-ended"
+    },
+    "WebQA": {
+        "task_instruction": [
+            "I will give you several images and a question, your job is to seek information in the slide and answer the question correctly.",
+            "Based on the images, please answer the following question.",
+            "Given the provided images and a question, your task is to derive information from the images and respond to the question accurately.",
+            "Based on the content within these images, could you provide an answer to the ensuing question?",
+            "Upon reviewing several images, your task is to extract the necessary information and answer the given question.",
+            "Please examine the images closely and provide a suitable response to the question that follows.",
+            "Having viewed the images, can you use the information presented to answer the following question?",
+            "Please analyze the data in these images and accordingly answer the proposed question.",
+            "Using the images as your reference, please respond to the following question.",
+            "Examine the images carefully, and then answer the question based on the information gleaned."
+        ],
+        "question_type": "open-ended"
+    },
+    "TQA": {
+        "task_instruction": [
+            "Provided with a series of diagrams from a textbook, your responsibility is to correctly answer the following question. You must choose your answer from the Choice List.",
+            "Using a selection of textbook diagrams, your task is to provide an accurate response to the subsequent query. You must choose your answer from the Choice List.",
+            "With a set of diagrams extracted from a textbook, your role is to answer the ensuing question correctly. You must choose your answer from the Choice List.",
+            "Given an assortment of diagrams from a textbook, please provide an accurate response to the next question. You must choose your answer from the Choice List.",
+            "Based on a series of diagrams from a textbook, your job is to correctly answer the forthcoming question. You must choose your answer from the Choice List.",
+            "Using a collection of textbook diagrams as your reference, please respond accurately to the following query. You must choose your answer from the Choice List.",
+            "Given various diagrams sourced from a textbook, your duty is to accurately answer the subsequent question. You must choose your answer from the Choice List.",
+            "Using the textbook diagrams provided, your task is to correctly answer the ensuing query. You must choose your answer from the Choice List.",
+            "Upon reviewing a collection of diagrams from a textbook, your job is to accurately respond to the following question. You must choose your answer from the Choice List.",
+            "Given a set of diagrams from a textbook, your responsibility is to provide a correct response to the next query. You must choose your answer from the Choice List."
+        ],
+        "question_type": "multi-choice"
+    },
+    "nuscenes": {
+        "task_instruction": [
+            "Given six images taken from different cameras on a street view car, your task is to answer questions about the depicted scene. You must choose your answer from the Choice List. ",
+            "Upon receiving six photographs captured from various cameras on a street-view car, your responsibility is to provide accurate responses to questions about the scene. You must choose your answer from the Choice List. ",
+            "Using six pictures taken from distinct cameras mounted on a street view car, your task is to answer queries about the presented scenario. You must choose your answer from the Choice List. ",
+            "With six images from multiple cameras on a street view car provided, your job is to answer questions pertaining to the scene. You must choose your answer from the Choice List. ",
+            "Given six pictures captured from different angles on a street view car, your duty is to respond accurately to questions about the depicted scene. You must choose your answer from the Choice List. ",
+            "Presented with six images from various cameras on a street view car, your responsibility is to answer inquiries about the scene. You must choose your answer from the Choice List. ",
+            "Using six photographs from multiple cameras on a street-view vehicle, your job is to provide answers to the questions about the scene. You must choose your answer from the Choice List. ",
+            "Given a collection of six images taken from different cameras on a street view car, your task is to respond to the questions about the scenario. You must choose your answer from the Choice List. ",
+            "With six images, each from a different camera on a street-view car, your assignment is to answer questions about the scene. You must choose your answer from the Choice List. ",
+            "Upon viewing six pictures captured from various cameras on a street view vehicle, your role is to answer questions about the presented scene. You must choose your answer from the Choice List. "
+        ],
+        "question_type": "open-ended"
+    },
+    "VizWiz": {
+        "task_instruction": [
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n I will give you two sets of pictures, questions, and answers to determine if they belong to the same 'Question-Answer Differences'. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n I will provide you with two groups of pictures, questions, and answers to see if they have the same 'Question-Answer Differences'. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n To check if they share the same 'Question-Answer Differences', I will give you two sets of pictures, questions, and answers. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n Two sets of pictures, questions, and answers will be given to you to compare their 'Question-Answer Differences'. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n I will present you with two collections of pictures, questions, and answers to examine if they match in their 'Question-Answer Differences'. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n To evaluate if they have identical 'Question-Answer Differences', I will supply you with two sets of pictures, questions, and answers. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n Two batches of pictures, questions, and answers will be delivered to you to assess their 'Question-Answer Differences'. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n I will show you two groups of pictures, questions, and answers to determine if they agree on their 'Question-Answer Differences'. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n To verify if they have the same 'Question-Answer Differences', I will offer you two sets of pictures, questions, and answers. You must choose your answer from the Choice List. ",
+            "There are ten possible explanations for the ten different answers to a VQA:\n1:Low Quality Image(LQI), image is too small, out of focus, having poor quality, or nothing is visible.\n2:Answer Not Present(IVE), good image, but answer to the question is not present in the image (Insufficient Visual Evidence), so some answers reflect guesses.\n3:Invalid(INV), a proper or semantically correct question is absent.\n4:Difficult(DFF), questions that require domain expertise,special skills, or too much effort.\n5:Ambiguous(AMB), good image and valid question, but taken together they have more than one valid interpretation, leading to multiple answers.\n6:Subjective(SBJ), opinion-driven questions, such as assessing beauty, fashion sense, emotions.\n7:Synonyms(SYN), answers present the same idea, but using different words having similar meaning.\n8:Granular(GRN), answers present the same idea, but in different levels of detail or specialization.\n9:Spam(SPM), a person inadequately answers a simple, straight-forward visual question.\n10:Other(OTH), others\n Two sets of pictures, questions, and answers will be provided to you to measure their 'Question-Answer Differences'. You must choose your answer from the Choice List. "
+        ],
+        "question_type": "multi-choice"
+    },
+    "MIT-States_StateCoherence": {
+        "task_instruction": [
+            "I will provide you with two sets of pictures, each of which shows an object in the opposite state. Can you tell me if the states of these two sets of pictures are the same? You must choose your answer from the Choice List. ",
+            "I have two sets of pictures that show an object in opposite states. Can you tell me if the states of these two sets of pictures are the same? You must choose your answer from the Choice List. ",
+            "I will give you two sets of pictures, each of which depicts an object in its opposite state. Can you tell me if the states of these two sets of pictures are the same? You must choose your answer from the Choice List. ",
+            "I have two sets of pictures that depict an object in its opposite state. Can you tell me if the states of these two sets of pictures are the same? You must choose your answer from the Choice List. ",
+            "I will show you two sets of pictures, each showing an object in its opposite state. Can you tell me if the states of these two sets of pictures are the same? You must choose your answer from the Choice List. ",
+            "I have two sets of pictures that show an object in its opposite state. Can you tell me if the states of these two sets of pictures are identical? You must choose your answer from the Choice List. ",
+            "I will provide you with two sets of pictures, each showing an object in its opposite state. Can you tell me if the states of these two sets of pictures are identical? You must choose your answer from the Choice List. ",
+            "I have two sets of pictures that depict an object in its opposite state. Can you tell me if the states of these two sets of pictures are identical? You must choose your answer from the Choice List. ",
+            "I will show you two sets of pictures, each depicting an object in its opposite state. Can you tell me if the states of these two sets of pictures are identical? You must choose your answer from the Choice List. ",
+            "I have two sets of pictures that depict an object in its opposite state. Can you tell me if the states of these two sets of pictures are the same? You must choose your answer from the Choice List. "
+        ],
+        "question_type": "multi-choice"
+    },
+    "MIT-States_PropertyCoherence": {
+        "task_instruction": [
+            "Are the following four images of the same class?  You must choose your answer from the Choice List. ",
+            "Do the following four images belong to the same category?  You must choose your answer from the Choice List. ",
+            "Are these four images of the same kind?  You must choose your answer from the Choice List. ",
+            "Do these four images share the same class?  You must choose your answer from the Choice List. ",
+            "Are the four images below from the same group?  You must choose your answer from the Choice List. ",
+            "Do the four images underneath have the same type?  You must choose your answer from the Choice List. ",
+            "Are these four pictures of the same sort?  You must choose your answer from the Choice List. ",
+            "Do these four pictures fall into the same category?  You must choose your answer from the Choice List. ",
+            "Are the four pictures below of the same kind?  You must choose your answer from the Choice List. ",
+            "Do the four pictures underneath belong to the same class?  You must choose your answer from the Choice List. ",
+            "Are the following two similar images described by the same adjective?  You must choose your answer from the Choice List. ",
+            "Do the following two similar images have the same adjective?  You must choose your answer from the Choice List. ",
+            "Are these two images that look alike described by the same word?  You must choose your answer from the Choice List. ",
+            "Do these two images that are similar share the same adjective?  You must choose your answer from the Choice List. ",
+            "Are the two images below that resemble each other described by the same term?  You must choose your answer from the Choice List. ",
+            "Do the two images underneath that are alike have the same word?  You must choose your answer from the Choice List. ",
+            "Are these two pictures that look similar described by the same adjective?  You must choose your answer from the Choice List. ",
+            "Do these two pictures that are similar share the same word?  You must choose your answer from the Choice List. ",
+            "Are the two pictures below that resemble each other described by the same term?  You must choose your answer from the Choice List. ",
+            "Do the two pictures underneath that are alike have the same adjective?  You must choose your answer from the Choice List. ",
+            "Q:What do the following two pictures describe as opposite?  You must choose your answer from the Choice List. ",
+            "Q:What is the opposite word that the following two pictures illustrate?  You must choose your answer from the Choice List. ",
+            "Q:What is the word that the following two images show as opposite?  You must choose your answer from the Choice List. ",
+            "Q:What is the opposite term that these two pictures demonstrate?  You must choose your answer from the Choice List. ",
+            "Q:What is the term that these two images display as opposite?  You must choose your answer from the Choice List. ",
+            "Q:What is the opposite adjective that the two pictures below depict?  You must choose your answer from the Choice List. ",
+            "Q:What is the adjective that the two images below present as opposite?  You must choose your answer from the Choice List. ",
+            "Q:What is the opposite word that the two pictures underneath illustrate?  You must choose your answer from the Choice List. ",
+            "Q:What is the word that the two images underneath show as opposite?  You must choose your answer from the Choice List. ",
+            "Q:What is the opposite term that these two photos demonstrate?  You must choose your answer from the Choice List. "
+        ],
+        "question_type": "multi-choice"
+    },
+    "VISION": {
+        "task_instruction": [
+            "Are these two workpieces the same type?",
+            "Are these two workpieces of the same kind?",
+            "Are these two workpieces the same category?",
+            "Are these two workpieces the same classification?",
+            "Are these two workpieces the same sort?",
+            "Are these two workpieces the same variety?",
+            "Are these two workpieces the same genre?",
+            "Are these two workpieces the same family?",
+            "Are these two workpieces the same species?",
+            "Are these two workpieces the same breed?",
+            "Are the damages to the following two identical workpieces of the same type?",
+            "Are the damages on both workpieces identical?",
+            "Are the damages on both workpieces the same?",
+            "Are the damages on both workpieces of the same type?",
+            "Do both workpieces have identical damages?",
+            "Do both workpieces have the same damages?",
+            "Do both workpieces have damages of the same type?",
+            "Are the damages on these two identical workpieces similar?",
+            "Are the damages on these two identical workpieces alike?",
+            "Are the damages on these two identical workpieces equal?"
+        ],
+        "question_type": "multi-choice"
+    },
+    "RecipeQA_ImageCoherence": {
+        "task_instruction": [
+            "Presented with a textual recipe tutorial, your task is to scrutinize it carefully and select the image that is incoherent in the provided sequence of images. You must choose your answer from the Choice List. ",
+            "Given a text-based recipe guide, your responsibility is to meticulously review it and identify the image that doesn't fit in the following sequence of images. You must choose your answer from the Choice List. ",
+            "Upon receiving a textual recipe tutorial, your job is to examine it attentively and choose the incoherent image in the subsequent image sequence. You must choose your answer from the Choice List. ",
+            "Using a recipe tutorial composed entirely of text, your task is to scrutinize it and select the image that disrupts the continuity in the provided series of images. You must choose your answer from the Choice List. ",
+            "With a text-based recipe tutorial at your disposal, your job is to thoroughly study it and pinpoint the image that is out of place in the following image sequence. You must choose your answer from the Choice List. ",
+            "Provided with a textual recipe tutorial, your role is to closely inspect it and choose the image that doesn't align with the rest in the following sequence of images. You must choose your answer from the Choice List. ",
+            "Given a recipe guide in textual format, your task is to carefully examine it and identify the incoherent image in the subsequent series of images. You must choose your answer from the Choice List. ",
+            "Using a recipe tutorial written in text, your responsibility is to examine it carefully and select the incongruous image in the provided sequence of images. You must choose your answer from the Choice List. ",
+            "With a text-only recipe tutorial at hand, your job is to attentively study it and choose the image that breaks the consistency in the following sequence of images. You must choose your answer from the Choice List. ",
+            "Presented with a text-based recipe tutorial, your duty is to analyze it thoroughly and select the image that is inconsistent in the following series of images. You must choose your answer from the Choice List. "
+        ],
+        "question_type": "multi-choice"
+    },
+    "ALFRED": {
+        "task_instruction": [
+            "Give you a main goal, your job is to figure out what to do now by looking at current envirments. Your past views as well as decisions are also provided.",
+            "Given a primary objective and your current surroundings, use your previous decisions and perspectives to determine your next move.",
+            "Using the final goal as your guide, reflect on your past successful strategies as a smart agent. Observe the information in the image to inform your present decision.",
+            "As an intelligent entity, consider your past correct actions and aim for the ultimate goal. Now, examine the data within the picture to decide your immediate action.",
+            "You are an intelligent agent who has made smart decisions in the past. To achieve the end goal, scrutinize the image's details and contemplate your immediate action.",
+            "Given your past actions and the main goal, analyze your current environment. Decide your next step based on this analysis.",
+            "Your ultimate task is to reach the main goal. Reflect on your past decisions, consider your current surroundings, and determine your immediate action.",
+            "You are a smart agent aiming to reach a final goal. Consider your successful decisions from past rounds and the current situation presented in the image. What would be your next move?",
+            "As an intelligent entity, you are tasked with reaching the main goal. Utilizing your past decisions and the information in the picture, contemplate your next action.",
+            "Your objective is the main goal. Evaluate your current environment and your past decisions, and decide your immediate course of action."
+        ],
+        "question_type": "open-ended"
+    },
+    "OCR-VQA": {
+        "task_instruction": [
+            "I will give you two pictures of the book cover. Please look at the pictures and answer a question You must choose your answer from the Choice List. ",
+            "I will provide you with two images of the book cover. Please examine the images and answer a question. You must choose your answer from the Choice List. ",
+            "I will give you two pictures of the book cover. Please look at the pictures and answer a question. You must choose your answer from the Choice List. ",
+            "I will show you two photos of the book cover. Please review the photos and answer a question. You must choose your answer from the Choice List. ",
+            "I will present you with two snapshots of the book cover. Please inspect the snapshots and answer a question. You must choose your answer from the Choice List. ",
+            "I will display two visuals of the book cover. Please observe the visuals and answer a question. You must choose your answer from the Choice List. ",
+            "I will share two graphics of the book cover. Please analyze the graphics and answer a question. You must choose your answer from the Choice List. ",
+            "I will upload two illustrations of the book cover. Please scrutinize the illustrations and answer a question. You must choose your answer from the Choice List. ",
+            "I will send you two screenshots of the book cover. Please examine the screenshots and answer a question. You must choose your answer from the Choice List. ",
+            "I will provide you with two depictions of the book cover. Please evaluate the depictions and answer a question. You must choose your answer from the Choice List. "
+        ],
+        "question_type": "multi-choice"
+    },
+    "DocVQA": {
+        "task_instruction": [
+            "I will give you some pictures, and each group of pictures will correspond to a question. Please answer it briefly. You must choose your answer from the Choice List. ",
+            "For each group of pictures, there is a question. Please give a short answer to it. You must choose your answer from the Choice List. ",
+            "Please answer briefly the question that corresponds to each group of pictures. You must choose your answer from the Choice List. ",
+            "Each group of pictures has a related question. Please give a brief answer to it. You must choose your answer from the Choice List. ",
+            "There is a question for each group of pictures. Please answer it in a short way. You must choose your answer from the Choice List. ",
+            "Please give a short answer to the question that is related to each group of pictures. You must choose your answer from the Choice List. ",
+            "For every group of pictures, there is a corresponding question. Please answer it briefly. You must choose your answer from the Choice List. ",
+            "Each group of pictures relates to a question. Please give a brief answer to it. You must choose your answer from the Choice List. ",
+            "There is a related question for each group of pictures. Please answer it shortly. You must choose your answer from the Choice List. ",
+            "Please answer shortly the question that relates to each group of pictures. You must choose your answer from the Choice List. "
+        ],
+        "question_type": "multi-choice"
+    },
+    "IEdit": {
+        "task_instruction": [
+            "Please give a editing Request to describe the transformation from the source image to the target image.",
+            "What is the correct image edit instruction that can transfrom the source image to target image?",
+            "What editing actions would you suggest to modify the source image into the target image?",
+            "Please provide instructions for editing the source image to match the target image.",
+            "Describe the editing process to convert the source image to the target image.",
+            "What editing procedures should be implemented to transition the source image into the target image?",
+            "How can the source image be edited to resemble the target image?",
+            "Please give directions for the necessary edits to morph the source image into the target image.",
+            "What transformations must be applied to the source image to achieve the target image?",
+            "Can you describe the editing process to transform the source image into the target image?"
+        ],
+        "question_type": "open-ended"
+    },
+    "Spot-the-Diff": {
+        "task_instruction": [
+            "What's the difference between 2 images? ",
+            "Identify the alterations between these two images. ",
+            "What modifications can be observed between these two pictures? ",
+            "What has changed from the first image to the second? ",
+            "Point out the variations between the two images. ",
+            "Describe the contrast between these two images. ",
+            "What distinguishes these two images? ",
+            "Can you highlight the differences in these two pictures? ",
+            "Identify the transformations in the second image compared to the first. ",
+            "Explain the disparities between the first and second image. "
+        ],
+        "question_type": "open-ended"
+    },
+    "Birds-to-Words": {
+        "task_instruction": [
+            "What's the difference between 2 birds? ",
+            "Identify the alterations between these two birds. ",
+            "What modifications can be observed between these two birds? ",
+            "Name all the differences between these two birds.",
+            "Point out the variations between the two birds. ",
+            "Describe the contrast between these two birds. ",
+            "What distinguishes these two birds? ",
+            "Can you highlight the differences in these two birds? ",
+            "Identify the transformations in the second bird compared to the first. ",
+            "Explain the disparities between the first and second bird. "
+        ],
+        "question_type": "open-ended"
+    },
+    "CLEVR-Change": {
+        "task_instruction": [
+            "What's the difference between 2 images? ",
+            "Identify the alterations between these two images. ",
+            "What modifications can be observed between these two pictures? ",
+            "What has changed from the first image to the second? ",
+            "Point out the variations between the two images. ",
+            "Describe the contrast between these two images. ",
+            "What distinguishes these two images? ",
+            "Can you highlight the differences in these two pictures? ",
+            "Identify the transformations in the second image compared to the first. ",
+            "Explain the disparities between the first and second image. "
+        ],
+        "question_type": "open-ended"
+    },
+    "AESOP": {
+        "task_instruction": [
+            "Given the stories paired with the first several images, can you finish the story based on the last image?",
+            "With the narratives paired with the initial images, how would you conclude the story using the last picture?",
+            "Given the story so far from the first few images, can you complete the tale considering the final image?",
+            "Based on the narratives associated with the initial images, use the final picture to bring the story to a close.",
+            "Using the preceding stories paired with the images, can you draft the ending with reference to the last image?",
+            "With the stories connected to the initial pictures, how would you write the climax based on the last picture?",
+            "Taking the stories from the initial images into account, can you conclude the story using the elements of the final image?",
+            "From the narratives given with the initial images,  write the conclusion using the final image",
+            "Given the progression of the story with the first few images, can you write a fitting end considering the last image?",
+            "Based on the stories accompanying the first images, can you devise a conclusion for the story that incorporates the last image?"
+        ],
+        "question_type": "open-ended"
+    },
+    "FlintstonesSV": {
+        "task_instruction": [
+            "Given the stories paired with the first several images, can you finish the story based on the last image?",
+            "With the narratives paired with the initial images, how would you conclude the story using the last picture?",
+            "Given the story so far from the first few images, can you complete the tale considering the final image?",
+            "Based on the narratives associated with the initial images, use the final picture to bring the story to a close.",
+            "Using the preceding stories paired with the images, can you draft the ending with reference to the last image?",
+            "With the stories connected to the initial pictures, how would you write the climax based on the last picture?",
+            "Taking the stories from the initial images into account, can you conclude the story using the elements of the final image?",
+            "From the narratives given with the initial images,  write the conclusion using the final image",
+            "Given the progression of the story with the first few images, can you write a fitting end considering the last image?",
+            "Based on the stories accompanying the first images, can you devise a conclusion for the story that incorporates the last image?"
+        ],
+        "question_type": "open-ended"
+    },
+    "PororoSV": {
+        "task_instruction": [
+            "Given the stories paired with the first several images, can you finish the story based on the last image?",
+            "With the narratives paired with the initial images, how would you conclude the story using the last picture?",
+            "Given the story so far from the first few images, can you complete the tale considering the final image?",
+            "Based on the narratives associated with the initial images, use the final picture to bring the story to a close.",
+            "Using the preceding stories paired with the images, can you draft the ending with reference to the last image?",
+            "With the stories connected to the initial pictures, how would you write the climax based on the last picture?",
+            "Taking the stories from the initial images into account, can you conclude the story using the elements of the final image?",
+            "From the narratives given with the initial images,  write the conclusion using the final image",
+            "Given the progression of the story with the first few images, can you write a fitting end considering the last image?",
+            "Based on the stories accompanying the first images, can you devise a conclusion for the story that incorporates the last image?"
+        ],
+        "question_type": "open-ended"
+    },
+    "VIST": {
+        "task_instruction": [
+            "Given the stories paired with the first several images, can you finish the story based on the last image?",
+            "With the narratives paired with the initial images, how would you conclude the story using the last picture?",
+            "Given the story so far from the first few images, can you complete the tale considering the final image?",
+            "Based on the narratives associated with the initial images, use the final picture to bring the story to a close.",
+            "Using the preceding stories paired with the images, can you draft the ending with reference to the last image?",
+            "With the stories connected to the initial pictures, how would you write the climax based on the last picture?",
+            "Taking the stories from the initial images into account, can you conclude the story using the elements of the final image?",
+            "From the narratives given with the initial images,  write the conclusion using the final image",
+            "Given the progression of the story with the first few images, can you write a fitting end considering the last image?",
+            "Based on the stories accompanying the first images, can you devise a conclusion for the story that incorporates the last image?"
+        ],
+        "question_type": "open-ended"
+    },
+    "HQ-Edit": {
+        "task_instruction": "Please provide the image edit instruction that can transfrom the source image to the target image.",
+        "question_type": "open-ended"
+    },
+    "MagicBrush": {
+        "task_instruction": "Given several images that are edited step by step, please respectively provide the image edit instruction between adjacant images.",
+        "question_type": "open-ended"
+    },
+    "twitter_post": {
+        "task_instruction": "",
+        "question_type": "open-ended"
+    },
+    "MagicBrush-Diff": {
+        "task_instruction": "What's the difference between 2 images?",
+        "question_type": "open-ended"
+    }
+}
