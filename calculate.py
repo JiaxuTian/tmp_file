@@ -1,5 +1,8 @@
+import time
+
 import cv2
 import numpy as np
+import torch
 
 HueTemplates = {
     "i": [(0.00, 0.05)],
@@ -17,33 +20,27 @@ A = 360
 
 
 def deg_distance(a, b):
-    d1 = np.abs(a - b)
-    d2 = np.abs(360 - d1)
-    d = np.minimum(d1, d2)
-    return d
+    d1 = torch.abs(a - b)
+    d2 = torch.abs(360 - d1)
+    return torch.min(d1, d2)
 
 
 class HueSector:
-
     def __init__(self, center, width):
-        # In Degree [0,2 pi)
         self.center = center
         self.width = width
         self.border = [(self.center - self.width / 2), (self.center + self.width / 2)]
 
     def is_in_sector(self, H):
-        # True/False matrix if hue resides in the sector
         return deg_distance(H, self.center) < self.width / 2
 
     def distance_to_border(self, H):
         H_1 = deg_distance(H, self.border[0])
         H_2 = deg_distance(H, self.border[1])
-        H_dist2bdr = np.minimum(H_1, H_2)
-        return H_dist2bdr
+        return torch.min(H_1, H_2)
 
 
 class HarmonicScheme:
-
     def __init__(self, m, alpha):
         self.m = m
         self.alpha = alpha
@@ -58,44 +55,41 @@ class HarmonicScheme:
             self.sectors.append(sector)
 
     def harmony_score(self, X):
-        # Opencv store H as [0, 180) --> [0, 360)
-        H = X[:, :, 0].astype(np.int32) * 2
-        # Opencv store S as [0, 255] --> [0, 1]
-        S = X[:, :, 1].astype(np.float32) / 255.0
-
+        H = X[:, :, 0].to(torch.int32) * 2
+        S = X[:, :, 1].to(torch.float32) / 255.0
         H_dis = self.hue_distance(H)
-        H_dis = np.deg2rad(H_dis)
-
-        return np.sum(np.multiply(H_dis, S))
+        H_dis = torch.deg2rad(H_dis)
+        return torch.sum(H_dis * S)
 
     def hue_distance(self, H):
         H_dis = []
-        for i in range(len(self.sectors)):
-            sector = self.sectors[i]
-            H_dis.append(sector.distance_to_border(H))
-            H_dis[i][sector.is_in_sector(H)] = 0
-        H_dis = np.asarray(H_dis)
-        H_dis = H_dis.min(axis=0)
-        return H_dis
+        for sector in self.sectors:
+            H_d = sector.distance_to_border(H)
+            H_d[sector.is_in_sector(H)] = 0
+            H_dis.append(H_d)
+        H_dis = torch.stack(H_dis)
+        return torch.min(H_dis, axis=0).values
 
 
 def B(X):
-    F_matrix = np.zeros((M, A))
-    for i in range(M):
-        m = template_types[i]
+    F_matrix = torch.zeros((M, A), device='cuda')
+    X = torch.tensor(X, device='cuda')
+    for i, m in enumerate(template_types):
         for j in range(A):
             alpha = 360 / A * j
-            harmomic_scheme = HarmonicScheme(m, alpha)
-            F_matrix[i, j] = harmomic_scheme.harmony_score(X)
-    np.set_printoptions(threshold=np.inf)
+            harmonic_scheme = HarmonicScheme(m, alpha)
+            F_matrix[i, j] = harmonic_scheme.harmony_score(X)
 
-    (best_m_idx, best_alpha) = np.unravel_index(np.argmin(F_matrix), F_matrix.shape)
-    return F_matrix[best_m_idx][best_alpha]
+    best_m_idx, best_alpha = torch.unravel_index(torch.argmin(F_matrix), F_matrix.shape)
+    return F_matrix[best_m_idx, best_alpha].item()
 
 
-image_filename = r"C:\Users\86151\Desktop\2.png"
+# Load and convert image to HSV
+image_filename = r"C:\Users\86151\Desktop\1.png"
 color_image = cv2.imread(image_filename, cv2.IMREAD_COLOR)
 HSV_image = cv2.cvtColor(color_image, cv2.COLOR_BGR2HSV)
 
+# Calculate harmony score
 score = B(HSV_image)
+
 print(score)
