@@ -63,7 +63,7 @@ def extract_text(path):
     data = read_json(path)
     # for item in data:
     #     print(item['QA'][0]['q'])
-    questions = [{'q': item['QA'][0]['q']} for item in data]
+    questions = [item['QA'][0]['q'] for item in data]
     save_json("text_instruction.json", questions)
 
 
